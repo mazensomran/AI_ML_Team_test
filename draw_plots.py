@@ -16,7 +16,7 @@ class PlotDrawer:
         plot_paths = []
 
         #График 1: gt_corners и rb_corners
-        #plt.figure(num=1)
+
         plt.plot(self.data['gt_corners'], self.data['rb_corners'], color='blue')
         plt.xlabel('Ground Truth Corners')
         plt.ylabel('Model Predicted Corners')
@@ -27,7 +27,7 @@ class PlotDrawer:
         plt.show()
 
         # График 2: Распределение асимметрии «mean»
-        #plt.figure(num=2)
+
         sns.histplot(self.data['mean'], kde=True, color='green')
         plt.xlabel('Mean Deviation')
         plt.title('Distribution of Mean Deviation')
@@ -37,7 +37,7 @@ class PlotDrawer:
         plt.show()
 
         # График 3: Отношение отклонений между столбцами: Mean, Min, Max.
-        #plt.figure(num=3)
+
         plt.plot(self.data['mean'], label='Mean')
         plt.plot(self.data['min'], label='Min')
         plt.plot(self.data['max'], label='Max')
