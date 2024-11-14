@@ -22,7 +22,7 @@ class PlotDrawer:
         plot_path = os.path.join(self.plots_dir, 'gt_corners_distribution.png')
         plt.savefig(plot_path)
         plot_paths.append(plot_path)
-        plt.show()
+        #plt.show()
 
         # График 2: Распределение прогнозируемых значений "rb_corners"
         sns.histplot(self.data['rb_corners'], kde=True, color='green')
@@ -31,7 +31,7 @@ class PlotDrawer:
         plot_path = os.path.join(self.plots_dir, 'rb_corners_distribution.png')
         plt.savefig(plot_path)
         plot_paths.append(plot_path)
-        plt.show()
+        #plt.show()
 
         # График 3: gt_corners и rb_corners
         plt.scatter(self.data['gt_corners'], self.data['rb_corners'], color='blue')
@@ -41,7 +41,7 @@ class PlotDrawer:
         plot_path = os.path.join(self.plots_dir, 'gt_vs_predicted.png')
         plt.savefig(plot_path)
         plot_paths.append(plot_path)
-        plt.show()
+        #plt.show()
 
         #График 4: Распределение средних отклонений "mean"
         sns.histplot(self.data['mean'], kde=True, color='green')
@@ -50,7 +50,7 @@ class PlotDrawer:
         plot_path = os.path.join(self.plots_dir, 'mean_distribution.png')
         plt.savefig(plot_path)
         plot_paths.append(plot_path)
-        plt.show()
+        #plt.show()
 
         #График 5: Распределение максимальных отклонений "max"
         sns.histplot(self.data['max'], kde=True, color='red')
